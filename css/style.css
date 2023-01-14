@@ -377,6 +377,9 @@ a{
         width: 82%;
         margin-left: 0;
     }
+    .banner-content h2 {
+    font-size: 30px;
+    }
     .feature-content .feature-images {
         grid-template-columns: repeat(1, 1fr);
         width: 83%;
