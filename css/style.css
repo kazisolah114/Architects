@@ -49,14 +49,7 @@ a{
 .header-content .header-right nav  ul li a:hover{
     color:  #FF900E;
 }
-.header-content .header-right button {
-    background: transparent;
-    border: none;
-    font-size: 15px;
-}
-.header-content .header-right button a{
-    color: #424242;
-}
+
 
 /* Banner */
 .banner-content {
@@ -356,18 +349,63 @@ a{
      RESPONSIVE DESIGN
    -----------------------*/
 
-@media screen and (max-width: 688px){
-    .hide{
+.mobile-menu{
     display: none;
-    }
+}
+.mobile-menu span{}
+.menu-check{
+    display: none;
+}
+@media screen and (max-width: 688px){
+    
     .container{
         width: 100%;
     }
     .web-header{
         padding: 10px 20px;
     }
+    .head-menu ul{
+        opacity: 0;
+        visibility: hidden;
+        height:0;
+    }
+    .header-content .header-right nav {
+        position: relative;
+    }
+    .menu-check {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 2px;
+        right: -17px;
+        opacity: 0;
+    }
+    .menu-check:checked ~ ul{
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .header-content .header-right nav  ul {
+        flex-direction: column;
+        text-align: right;
+        gap: 15px;
+    }
+    .header-content .header-right {
+        align-items: flex-start;
+        gap: 0px;
+    }
     .banner-cont-items {
-    width: 100%;
+        width: 100%;
+    }
+    .header-content {
+    align-items: flex-start;
+}
+    .header-content .header-left h2 {
+    font-size: 19px;
     }
     .feature-content {
         flex-direction: column-reverse;
@@ -399,6 +437,15 @@ a{
     }
     .more-feature-cont .more-feature-image .experience {
         left: 100px;
+        width: 100px;
+        height: 55px;
+    }
+    .more-feature-cont .more-feature-image .experience h2 {
+        font-size: 20px;
+        margin-bottom: -5px;
+    }
+    .more-feature-cont .more-feature-image .experience p {
+        font-size: 13px;
     }
     .more-feature-cont .more-feature-details div {
         width: 89%;
